@@ -1,6 +1,6 @@
 const express = require('express')
-const hostname = "0.0.0.0"
-const PORT = 4000;
+
+//const PORT = 4000;
 const fs = require('fs')
 const path = require('path')
 const admzip = require('adm-zip')
@@ -100,6 +100,4 @@ app.post("/compressfiles", compressfilesupload.array("file", 100), (req, res) =>
   });
   
 
-app.listen(PORT, hostname, () => {
-  console.log(`App is listening on http://${hostname}:${PORT}/`);
-});
+app.listen(process.env.PORT || 5000)
