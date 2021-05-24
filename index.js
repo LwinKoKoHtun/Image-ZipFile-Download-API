@@ -15,6 +15,8 @@ app.use(express.static('public'))
 
 var dir = "public"
 var subDirectory = "public/uploads"
+
+
 var uploadDir = fs.readdirSync(__dirname+"/Upload_img");
 
 app.get('/imagezipfile', (req, res) => {
